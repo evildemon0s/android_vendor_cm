@@ -51,6 +51,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
+# HFM Files
+PRODUCT_COPY_FILES += \
+	vendor/cm/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
+	vendor/cm/prebuilt/etc/hosts.og:system/etc/hosts.og
+
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
